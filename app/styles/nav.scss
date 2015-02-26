@@ -1,0 +1,24 @@
+@import 'colors.scss';
+
+.nav-bar {
+  background-color: $navy;
+  display: block;
+  position: relative;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  -webkit-transition: .25s;
+  transition: .25s;
+  a {
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+  }
+}
+
+.brand {
+  float: left;
+  font-size: 30px;
+  padding-left: 10px;
+}

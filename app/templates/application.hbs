@@ -1,3 +1,38 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<header>
+  <div class="nav-bar">
+    <div class="brand">
+      <a href="#">Rantly</a>
+    </div>
+    <nav>
+      {{#link-to 'rants'}}Rants{{/link-to}}
+      {{#link-to 'users'}}Users{{/link-to}}
+      {{#link-to 'styleguide'}}Styleguide{{/link-to}}
+    </nav>
+  </div>
+</header>
 
-{{outlet}}
+<div class="content">
+
+  <aside class="rants-navigation">
+    <div class="search">
+      {{input value=query placeholder="Search"}}
+    </div>
+
+    <div class="swappable">
+      <div class="aside-avatar">
+        <img src="" alt="" />
+      </div>
+      <div class="log-out">
+        <button class="button" name="log-out">Log Out</button>
+      </div>
+    </div>
+  </aside>
+
+  <header class="content-header">
+    <button class="new-rant-btn", name="new-rant">New Rant</button>
+  </header>
+
+  <div class="main">
+    {{outlet}}
+  </div>
+</div>

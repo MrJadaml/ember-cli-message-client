@@ -1,0 +1,51 @@
+<article class="new-rant">
+  <header class="rant-header">
+    <div class="rant-title">
+      {{input value=rantTitle placeholder="Rant Title"}}
+    </div>
+    <div class="rant-buttons">
+      <button class="save button"><span class="fa fa-upload"> Save</span></button>
+      <button class="cancel button" ><span class="fa fa-sign-out"> Cancel</span></button>
+    </div>
+  </header>
+
+  <aside class="new-rant-aside">
+    <div class="rant-avatar">
+      <img src="" alt="" />
+    </div>
+    <div class="rant-word-count">
+      0 Characters
+    </div>
+  </aside>
+
+  <section class="rant-body">
+    {{textarea rows='8' cols='40' placeholder="Start your rant."}}
+  </section>
+</article>
+
+<section class="rant">
+  <header class="rant-header">
+    <div class="rant-header-title">
+      <a id="ember444" class="ember-view" href="/rants/1"><h3>This is a rant!</h3></a>
+    </div>
+    <div class="rant-header-actions">
+      <button class="button button-primary" data-ember-action="445"><span class="icon-new"> Edit</span></button>
+    </div>
+  </header>
+
+  <aside class="rant-aside">
+    <div id="ember446" class="ember-view author">
+      <div style="background-image: url(http://www.gravatar.com/avatar/undefined?s=200)" class="author-photo">
+      </div>
+      <h5> </h5>
+      <h6></h6>
+    </div>
+  </aside>
+
+  <section class="rant-item-content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve...
+  </section>
+
+</section>
+
+{{outlet}}
