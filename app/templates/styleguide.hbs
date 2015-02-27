@@ -4,8 +4,10 @@
       {{input value=rantTitle placeholder="Rant Title"}}
     </div>
     <div class="rant-buttons">
-      <button class="save btn-green"><span class="fa fa-upload"> Save</span></button>
-      <button class="cancel btn-gray" ><span class="fa fa-sign-out"> Cancel</span></button>
+      <button class="save btn-green" {{action 'saveRant'}}><span class="fa fa-upload"> Save</span></button>
+      <button class="cancel btn-gray" {{action 'cancelRant'}}><span class="fa fa-sign-out"> Cancel</span></button>
+      <!-- Only in Edit template -->
+      <button class="delete btn-yellow"{{action 'deleteRant'}} ><span class="fa fa-trash-o"> Delete</span></button>
     </div>
   </header>
 

@@ -65,6 +65,10 @@ button {
   background: $cancel;
 }
 
+.btn-yellow {
+  background: $delete;
+}
+
 .new-rant-btn {
   float: right;
   background: #fff;
@@ -77,6 +81,11 @@ button {
   background: $teal;
   color: #fff;
   border-color: $teal;
+}
+
+.delete {
+  float: left;
+  margin-left: 15px;
 }
 
 .main {
