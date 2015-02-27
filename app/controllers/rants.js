@@ -8,6 +8,10 @@ export default Ember.ArrayController.extend({
       rant.set('editTemp', true);
     },
 
+    cancelRant: function (rant) {
+      rant.set('editTemp', false)
+    },
+
     deleteRant: function () {
 
     }

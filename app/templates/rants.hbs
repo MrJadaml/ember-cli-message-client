@@ -1,6 +1,6 @@
 <ul>
   {{#each rant in model}}
-    <li {{bind-attr class="rant.showTemp:show rant.editTemp:edit"}}>
+    <div {{bind-attr class="rant.showTemp:show rant.editTemp:edit"}}>
       {{#if rant.editTemp}}
 
         <article class="new-rant ui-box">
@@ -10,9 +10,9 @@
             </div>
             <div class="rant-buttons">
               <button class="save btn-green" {{action 'saveRant'}}><span class="fa fa-upload"> Save</span></button>
-              <button class="cancel btn-gray" {{action 'cancelRant'}}><span class="fa fa-sign-out"> Cancel</span></button>
+              <button class="cancel btn-gray" {{action 'cancelRant' rant}}><span class="fa fa-sign-out"> Cancel</span></button>
               <!-- Only in Edit template -->
-              <button class="delete btn-yellow"{{action 'deleteRant'}} ><span class="fa fa-trash-o"> Delete</span></button>
+              <button class="delete btn-yellow"{{action 'deleteRant' rant}} ><span class="fa fa-trash-o"> Delete</span></button>
             </div>
           </header>
 
@@ -54,7 +54,7 @@
         </section>
 
       {{/if}}
-    </li>
+    </div>
   {{/each}}
 </ul>
 
