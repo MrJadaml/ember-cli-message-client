@@ -1,16 +1,16 @@
-<article class="new-rant">
+<article class="new-rant ui-box">
   <header class="rant-header">
     <div class="rant-title">
       {{input value=rantTitle placeholder="Rant Title"}}
     </div>
     <div class="rant-buttons">
-      <button class="save button"><span class="fa fa-upload"> Save</span></button>
-      <button class="cancel button" ><span class="fa fa-sign-out"> Cancel</span></button>
+      <button class="save btn-green"><span class="fa fa-upload"> Save</span></button>
+      <button class="cancel btn-gray" ><span class="fa fa-sign-out"> Cancel</span></button>
     </div>
   </header>
 
-  <aside class="new-rant-aside">
-    <div class="rant-avatar">
+  <aside class="rant-aside">
+    <div class="avatar">
       <img src="" alt="" />
     </div>
     <div class="rant-word-count">
@@ -23,29 +23,56 @@
   </section>
 </article>
 
-<section class="rant">
+<section class="rant ui-box">
   <header class="rant-header">
-    <div class="rant-header-title">
-      <a id="ember444" class="ember-view" href="/rants/1"><h3>This is a rant!</h3></a>
+    <div class="rant-title">
+      <h3>This is a rant!</h3>
     </div>
-    <div class="rant-header-actions">
-      <button class="button button-primary" data-ember-action="445"><span class="icon-new"> Edit</span></button>
+    <div class="rant-buttons">
+      <button class="save btn-green"><span class="fa fa-pencil-square-o"> Edit</span></button>
     </div>
   </header>
 
   <aside class="rant-aside">
-    <div id="ember446" class="ember-view author">
-      <div style="background-image: url(http://www.gravatar.com/avatar/undefined?s=200)" class="author-photo">
-      </div>
-      <h5> </h5>
-      <h6></h6>
+    <div class="avatar">
+      <img src="" alt="" />
     </div>
   </aside>
 
-  <section class="rant-item-content">
+  <section class="rant-body">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve...
   </section>
+</section>
 
+<section class="ranters">
+  <header class="ranters-header">
+    <h3>Ranters</h3>
+  </header>
+
+  <div class="ranter ui-box">
+    <div class="avatar">
+    </div>
+
+    <h5 class="ranter-name">MrJadamL</h5>
+    <h6>adam@gmail.com</h6>
+  </div>
+
+  <div class="ranter ui-box">
+    <div class="avatar">
+    </div>
+
+    <h5 class="ranter-name">Carolyn L</h5>
+    <h6>carolyn@gmail.com</h6>
+
+  </div>
+
+  <div class="ranter ui-box">
+    <div class="avatar">
+    </div>
+
+    <h5 class="ranter-name">Aaron Gray</h5>
+    <h6>aaron@gmail.com</h6>
+  </div>
 </section>
 
 {{outlet}}

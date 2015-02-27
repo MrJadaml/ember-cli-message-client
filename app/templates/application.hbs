@@ -19,17 +19,19 @@
     </div>
 
     <div class="swappable">
-      <div class="aside-avatar">
+      <div class="avatar">
         <img src="" alt="" />
       </div>
       <div class="log-out">
-        <button class="button" name="log-out">Log Out</button>
+        <button class=" btn-green">Log Out</button>
       </div>
     </div>
   </aside>
 
   <header class="content-header">
-    <button class="new-rant-btn", name="new-rant">New Rant</button>
+    {{#link-to 'new'}}
+      <button class="new-rant-btn">New Rant</button>
+    {{/link-to}}
   </header>
 
   <div class="main">

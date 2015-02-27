@@ -6,3 +6,26 @@
   background-color: $blue;
   padding: 7px 15px;
 }
+
+.rant {
+  width: 100%;
+  clear: both;
+  overflow: visible;
+  overflow: hidden;
+}
+
+.rant-aside {
+  float: left;
+  width: 21%;
+}
+
+.ranter {
+  float: left;
+  width: 23.6202%;
+  margin-left: 15px;
+  min-height: 190px;
+}
+
+.ranter:first-of-type, .ranter:nth-of-type(4n+1) {
+margin-left: 0;
+}
