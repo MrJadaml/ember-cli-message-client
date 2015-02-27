@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('styleguide');
   this.route('rants');
   this.route('users');
+  this.route('new');
 });
 
 export default Router;

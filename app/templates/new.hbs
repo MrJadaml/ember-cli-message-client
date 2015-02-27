@@ -1,0 +1,26 @@
+<article class="new-rant ui-box">
+  <header class="rant-header">
+    <div class="rant-title">
+      {{input value=rantTitle placeholder="Rant Title"}}
+    </div>
+    <div class="rant-buttons">
+      <button class="save btn-green" {{action 'saveRant'}}><span class="fa fa-upload"> Save</span></button>
+      <button class="cancel btn-gray" {{action 'cancelRant'}}><span class="fa fa-sign-out"> Cancel</span></button>
+    </div>
+  </header>
+
+  <aside class="rant-aside">
+    <div class="avatar">
+      <img src="" alt="" />
+    </div>
+    <div class="rant-word-count">
+      {{charCount}} Characters
+    </div>
+  </aside>
+
+  <section class="rant-body">
+    {{textarea value=rantBody keyUpAction='charCount' rows='8' cols='40' placeholder="Start your rant."}}
+  </section>
+</article>
+
+{{outlet}}
