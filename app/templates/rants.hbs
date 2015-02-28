@@ -6,10 +6,10 @@
         <article class="new-rant ui-box">
           <header class="rant-header">
             <div class="rant-title">
-              {{input value=rantTitle placeholder="Rant Title"}}
+              {{input value=rantTitle }}
             </div>
             <div class="rant-buttons">
-              <button class="save btn-green" {{action 'saveRant'}}><span class="fa fa-upload"> Save</span></button>
+              <button class="save btn-green" {{action 'saveRant' rant}}><span class="fa fa-upload"> Save</span></button>
               <button class="cancel btn-gray" {{action 'cancelRant' rant}}><span class="fa fa-sign-out"> Cancel</span></button>
               <!-- Only in Edit template -->
               <button class="delete btn-yellow"{{action 'deleteRant' rant}} ><span class="fa fa-trash-o"> Delete</span></button>
@@ -26,7 +26,7 @@
           </aside>
 
           <section class="rant-body">
-            {{textarea rows='8' cols='40' placeholder="Start your rant."}}
+            {{textarea value=rantBody rows='8' cols='40' placeholder="Start your rant."}}
           </section>
         </article>
 
