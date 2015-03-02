@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'client-rantly',
     environment: environment,
     baseURL: '/',
+    adapterURL: process.env.ADAPTER_URL,
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -26,8 +27,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
   };
+
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
