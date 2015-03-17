@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  needs: ['search'],
 
   actions: {
-    search: function () {
-      var searchedText = this.get('query');
-      this.transitionToRoute('search', { query: searchedText });
+    doSearch: function () {
+      var query = this.get('query');
+      this.get('controllers.search').send('anything', query);
     },
   }
 });
