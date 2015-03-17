@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
 
   actions: {
     anything: function(query){
+      this.transitionToRoute('search');
       var getRants = this.store.find('rant', {query: query});
 
       getRants.then(function(res) {
