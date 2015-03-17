@@ -1,0 +1,61 @@
+<ul>
+  {{#each rant in searchResults}}
+    <div {{bind-attr class="rant.showTemp:show rant.editTemp:edit"}}>
+      {{#if rant.editTemp}}
+
+        <article class="new-rant ui-box">
+          <header class="rant-header">
+            <div class="rant-title">
+              {{input value=rant.title }}
+            </div>
+            <div class="rant-buttons">
+              <button class="save btn-green" {{action 'saveRant' rant}}><span class="fa fa-upload"> Save</span></button>
+              <button class="cancel btn-gray" {{action 'cancelRant'}}><span class="fa fa-sign-out"> Cancel</span></button>
+              <!-- Only in Edit template -->
+              <button class="delete btn-yellow"{{action 'deleteRant' rant}} ><span class="fa fa-trash-o"> Delete</span></button>
+            </div>
+          </header>
+
+          <aside class="rant-aside">
+            <div class="avatar">
+              <img src="" alt="" />
+            </div>
+            <div class="rant-word-count">
+              {{charCount}} Characters
+            </div>
+          </aside>
+
+          <section class="rant-body">
+            {{textarea value=rant.body rows='8' cols='40' placeholder="Start your rant."}}
+          </section>
+        </article>
+
+      {{else}}
+
+        <section class="rant ui-box">
+          <header class="rant-header">
+            <div class="rant-title">
+              <h3>{{rant.title}}</h3>
+            </div>
+            <div class="rant-buttons">
+              <button class="save btn-green" {{action 'editRant' }}><span class="fa fa-pencil-square-o"> Edit</span></button>
+            </div>
+          </header>
+
+          <aside class="rant-aside">
+            <div class="avatar">
+              <img src="" alt="" />
+            </div>
+          </aside>
+
+          <section class="rant-body">
+              {{rant.body}}
+          </section>
+        </section>
+
+      {{/if}}
+    </div>
+  {{/each}}
+</ul>
+
+{{outlet}}

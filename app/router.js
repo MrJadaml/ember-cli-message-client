@@ -7,7 +7,8 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('styleguide');
-  this.route('rants', { path: '/' });
+  this.resource('rants', { path: '/' });
+  this.route('search', { path: 'search/:query'});
   this.route('users');
   this.route('new');
 });
