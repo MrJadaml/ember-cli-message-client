@@ -1,0 +1,11 @@
+<div class="login">
+  <form class="form login-form" {{action 'login' on='submit'}}>
+    <h2>Log In</h2>
+    {{input value=email type="text" placeholder="email"}}
+    {{input value=password type="password" placeholder="password"}}
+    {{input class="button" value="Log in" type="submit"}}
+  </form>
+  {{#if errorMessage}}
+    <div class="alert alert-error">{{errorMessage}}</div>
+  {{/if}}
+</div>

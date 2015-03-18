@@ -23,7 +23,9 @@
         <img src="" alt="" />
       </div>
       <div class="log-out">
-        <button class=" btn-green">Log Out</button>
+        {{#link-to 'login'}}
+          <button class=" btn-green">Login</button>
+        {{/link-to}}
       </div>
     </div>
   </aside>
