@@ -19,14 +19,14 @@
     </div>
 
     <div class="swappable">
-      {{#if currentUser}}
+      {{#if isAuthenticated}}
         <div class="avatar">
           <img src="" alt="" />
         </div>
         <div class="btn-grn logout">
-          {{#link-to 'logout'}}
+
             <button class="btn-green">Log Out</button>
-          {{/link-to}}
+          
         </div>
       {{else}}
         <form class="login-form" {{action 'login' on='submit'}}>

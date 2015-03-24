@@ -1,10 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  actions: {
+  needs: 'application',
+  isAuthenticated: Ember.computed.alias('controllers.application.isAuthenticated'),
 
+  actions: {
     login: function () {
-      var credentials = {
+        var appController = this.get("controllers.application"),
+            credentials = {
         email: this.get('email'),
         password: this.get('password')
       };
@@ -15,6 +18,7 @@ export default Ember.Controller.extend({
         if (response.auth_token) {
           localStorage.setItem('authToken', response.auth_token);
           alert("Login succeeded");
+          appController.set('isAuthenticated', true);
           this.transitionToRoute('rants');
         }
       }.bind(this));
