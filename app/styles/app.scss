@@ -6,21 +6,29 @@
 
 *, *:before, *:after { box-sizing: border-box;; }
 
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.72222;
+  color: $navy;
+  border: 2px solid $offWhite;
+  border-radius: 3px;
+  resize: none;
+}
+
 .search > ::-webkit-input-placeholder { color: #fff }
 
 .search {
   background-color: $blue;
   color: #fff;
-  margin-bottom: 15px;
-  // padding: 5px;
 }
 
 .search input {
   background: transparent;
   border: none;
   color: $navy;
-  padding: 5px 0;
-  font-size: 19px;
+  padding: 5px 10px;
   font-weight: 700px;
   line-height: 32px;
   outline: 0;
@@ -44,14 +52,36 @@
   margin-bottom: 15px;
 }
 
-.log-out > button {
-  width: 100%;
+.login-form {
+  position: relative;
+  padding: 15px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.nav-form {
+  position: relative;
+  margin-bottom: 15px;
+  input {
+    padding: 5px;
+    width: 100%;
+  }
 }
 
 button {
   border: 1px solid;
   border-radius: 3px;
   padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.login, .logout {
+  width: 100%;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 3px 12px;
   font-size: 14px;
   cursor: pointer;
   color: #fff;

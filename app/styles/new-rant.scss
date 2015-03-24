@@ -47,15 +47,5 @@
   float: left;
   width: 79%;
   padding-left: 20px;
-  textarea {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 18px;
-    line-height: 1.72222;
-    color: $navy;
-    border: 2px solid $offWhite;
-    border-radius: 3px;
-    resize: none;
-  }
+  textarea { margin-bottom: 15px; }
 }
