@@ -1,58 +1,59 @@
 <header>
-  <div class="nav-bar">
-    <div class="brand">
-      <a href="#">Rantly</a>
+  <div class='nav-bar'>
+    <div class='brand'>
+      <a href='#'>Rantly</a>
     </div>
     <nav>
       {{#link-to 'rants'}}Rants{{/link-to}}
       {{#link-to 'users'}}Users{{/link-to}}
+      {{#link-to 'signup'}}Sign Up{{/link-to}}
       {{#link-to 'styleguide'}}Styleguide{{/link-to}}
     </nav>
   </div>
 </header>
 
-<div class="content">
+<div class='content'>
 
-  <aside class="rants-navigation">
-    <div class="search">
-      {{input value=query action="doSearch" placeholder="Search"}}
+  <aside class='rants-navigation'>
+    <div class='search'>
+      {{input value=query action='doSearch' placeholder='Search'}}
     </div>
 
-    <div class="swappable">
+    <div class='swappable'>
       {{#if isAuthenticated}}
-        <div class="avatar">
-          <img src="" alt="" />
+        <div class='avatar'>
+          <img src=' alt=' />
         </div>
-        <div class="btn-grn logout">
+        <div class='btn-grn logout'>
+          {{input class='button btn-green logout' value='Log Out' type='submit'}}
+            <button class='btn-green'>Log Out</button>
 
-            <button class="btn-green">Log Out</button>
-          
         </div>
       {{else}}
-        <form class="login-form" {{action 'login' on='submit'}}>
-          <div class="nav-form">
+        <form class='login-form' {{action 'login' on='submit'}}>
+          <div class='nav-form'>
             {{ input value=email type='text' placeholder='email' }}
           </div>
           <div class='nav-form'>
             {{ input value=password type='password' placeholder='password'}}
           </div>
           {{#link-to 'login'}}Login{{/link-to}}
-          {{input class="button btn-green login" value="Log In" type="submit"}}
+          {{input class='button btn-green login' value='Log In' type='submit'}}
         </form>
         {{#if errorMessage}}
-          <div class="alert alert-error">{{errorMessage}}</div>
+          <div class='alert alert-error'>{{errorMessage}}</div>
         {{/if}}
       {{/if}}
     </div>
   </aside>
 
-  <header class="content-header">
+  <header class='content-header'>
     {{#link-to 'new'}}
-      <button class="new-rant-btn">New Rant</button>
+      <button class='new-rant-btn'>New Rant</button>
     {{/link-to}}
   </header>
 
-  <div class="main">
+  <div class='main'>
     {{outlet}}
   </div>
 </div>
