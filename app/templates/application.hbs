@@ -22,13 +22,9 @@
     <div class='swappable'>
       {{#if isAuthenticated}}
         <div class='avatar'>
-          <img src=' alt=' />
+          <img src='' alt='' />
         </div>
-        <div class='btn-grn logout'>
-          {{input class='button btn-green logout' value='Log Out' type='submit'}}
-            <button class='btn-green'>Log Out</button>
-
-        </div>
+        <button class="btn-grn logout"{{action 'logout'}}>Log Out</button>
       {{else}}
         <form class='login-form' {{action 'login' on='submit'}}>
           <div class='nav-form'>
@@ -38,7 +34,7 @@
             {{ input value=password type='password' placeholder='password'}}
           </div>
           {{#link-to 'login'}}Login{{/link-to}}
-          {{input class='button btn-green login' value='Log In' type='submit'}}
+          {{input class='btn-green login' value='Log In' type='submit'}}
         </form>
         {{#if errorMessage}}
           <div class='alert alert-error'>{{errorMessage}}</div>

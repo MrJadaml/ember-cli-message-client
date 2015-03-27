@@ -28,7 +28,8 @@ export default Ember.Route.extend({
 
     logout: function () {
       localStorage.removeItem('authToken');
-      this.transitionToRoute('signUp');
+      // insert logout into header
+      this.transitionToRoute('signup');
     }
   }
 });
