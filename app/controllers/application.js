@@ -12,10 +12,6 @@ export default Ember.Controller.extend({
     // http.post('/authenticate').then() unless isAuthenticated
   },
 
-  currentUser: function () {
-    
-  },
-
   actions: {
     doSearch: function () {
       var query = this.get('query');

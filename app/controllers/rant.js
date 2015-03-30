@@ -2,6 +2,10 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
   editTemp: true,
+  belongsToCurrentUser: function () {
+    console.log(this);
+    debugger;
+  }.property('model.@each'),
 
   actions: {
     editRant: function() {

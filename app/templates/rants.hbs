@@ -1,16 +1,16 @@
 <ul>
   {{#each rant in model itemController='rant'}}
     <div {{bind-attr class="rant.showTemp:show rant.editTemp:edit"}}>
-      {{#if rant.currentUser}}
+      {{log rant.belongsToCurrentUser}}
+      {{#if rant.belongsToCurrentUser}}
         {{#if rant.editTemp}}
-
           <section class="rant ui-box">
             <header class="rant-header">
               <div class="rant-title">
                 <h3>{{rant.title}}</h3>
               </div>
               <div class="rant-buttons">
-                <button class="save btn-green" {{action 'editRant' }}><span class="fa fa-pencil-square-o"> Edit</span></button>
+                <button class="save btn-green" {{action 'editRant'}}><span class="fa fa-pencil-square-o"> Edit</span></button>
               </div>
             </header>
 
