@@ -29,6 +29,7 @@ export default Ember.Controller.extend({
         this.set('errorMessage', response.error);
         if (response.auth_token) {
           localStorage.setItem('authToken', response.auth_token);
+          localStorage.setItem('userId', response.user_id);
           this.set('isAuthenticated', true);
           this.transitionToRoute('rants');
         }

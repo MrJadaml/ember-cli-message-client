@@ -1,10 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
+  needs: ['application'],
   editTemp: true,
   belongsToCurrentUser: function () {
-    console.log(this);
-    debugger;
+    // var currentUser = NEED CURRENT USER IN LOCALSTORE;
+    //            user = this.model._data.user;
+
   }.property('model.@each'),
 
   actions: {
