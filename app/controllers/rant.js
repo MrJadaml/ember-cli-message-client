@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-  editTemp: false,
+  editTemp: true,
 
   actions: {
     editRant: function() {

@@ -12,6 +12,10 @@ export default Ember.Controller.extend({
     // http.post('/authenticate').then() unless isAuthenticated
   },
 
+  currentUser: function () {
+    
+  },
+
   actions: {
     doSearch: function () {
       var query = this.get('query');
@@ -36,10 +40,10 @@ export default Ember.Controller.extend({
     },
 
     logout: function () {
-      localStorage.removeItem('authToken');
+      localStorage.clear();
       this.set('isAuthenticated', false);
       // insert logout into header
-      this.transitionToRoute('signup');
+      this.transitionToRoute('rants');
     }
   }
 });
