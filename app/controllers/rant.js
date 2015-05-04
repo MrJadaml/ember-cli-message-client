@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
   needs: ['application'],
-  editTemp: true,
+  editTemp: false,
   belongsToCurrentUser: function () {
     return parseFloat(localStorage.userId) === this.model._data.user
   }.property('model.@each'),
