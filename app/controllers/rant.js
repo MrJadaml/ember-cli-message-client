@@ -4,9 +4,7 @@ export default Ember.ObjectController.extend({
   needs: ['application'],
   editTemp: true,
   belongsToCurrentUser: function () {
-    // var currentUser = NEED CURRENT USER IN LOCALSTORE;
-    //            user = this.model._data.user;
-
+    return parseFloat(localStorage.userId) === this.model._data.user
   }.property('model.@each'),
 
   actions: {

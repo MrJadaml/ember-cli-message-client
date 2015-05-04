@@ -1,7 +1,6 @@
 <ul>
   {{#each rant in model itemController='rant'}}
     <div {{bind-attr class="rant.showTemp:show rant.editTemp:edit"}}>
-      {{#if rant.belongsToCurrentUser}}
         {{#if rant.editTemp}}
           <section class="rant ui-box">
             <header class="rant-header">
@@ -9,7 +8,9 @@
                 <h3>{{rant.title}}</h3>
               </div>
               <div class="rant-buttons">
-                <button class="save btn-green" {{action 'editRant'}}><span class="fa fa-pencil-square-o"> Edit</span></button>
+                {{#if rant.belongsToCurrentUser}}
+                  <button class="save btn-green" {{action 'editRant'}}><span class="fa fa-pencil-square-o"> Edit</span></button>
+                {{/if}}
               </div>
             </header>
 
@@ -34,7 +35,6 @@
               <div class="rant-buttons">
                 <button class="save btn-green" {{action 'saveRant' rant}}><span class="fa fa-upload"> Save</span></button>
                 <button class="cancel btn-gray" {{action 'cancelRant'}}><span class="fa fa-sign-out"> Cancel</span></button>
-                <!-- Only in Edit template -->
                 <button class="delete btn-yellow"{{action 'deleteRant' rant}} ><span class="fa fa-trash-o"> Delete</span></button>
               </div>
             </header>
@@ -54,7 +54,7 @@
           </article>
 
         {{/if}}
-      {{/if}}
+
     </div>
   {{/each}}
 </ul>
