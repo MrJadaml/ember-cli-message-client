@@ -23,10 +23,10 @@ export default Ember.Controller.extend({
     },
 
     login: function () {
-        var credentials = {
-          email: this.get('email'),
-          password: this.get('password')
-        };
+      var credentials = {
+        email: this.get('email'),
+        password: this.get('password')
+      };
 
       this.set('errorMessage', null);
       return Ember.$.post('login', credentials).then(function(response){

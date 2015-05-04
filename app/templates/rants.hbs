@@ -1,7 +1,6 @@
 <ul>
   {{#each rant in model itemController='rant'}}
     <div {{bind-attr class="rant.showTemp:show rant.editTemp:edit"}}>
-      {{log rant.belongsToCurrentUser}}
       {{#if rant.belongsToCurrentUser}}
         {{#if rant.editTemp}}
           <section class="rant ui-box">
