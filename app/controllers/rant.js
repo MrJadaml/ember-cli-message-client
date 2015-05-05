@@ -1,11 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-  needs: ['application'],
+  needs: ['application', 'new'],
   editTemp: false,
   belongsToCurrentUser: function () {
-    return parseFloat(localStorage.userId) === this.model._data.user
+    return parseFloat(localStorage.userId) === this.model._data.user;
   }.property('model.@each'),
+
+  charCount: function () {
+    return this.get('rantBody').length;
+  }.property('rantBody'),
 
   actions: {
     editRant: function() {
