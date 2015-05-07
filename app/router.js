@@ -9,7 +9,7 @@ Router.map(function() {
   this.route('styleguide');
   this.resource('rants', { path: '/' });
   this.route('search');
-  this.route('users');
+  this.resource('users');
   this.route('new');
   this.route('login');
   this.route('session');

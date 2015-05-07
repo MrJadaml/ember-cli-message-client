@@ -8,9 +8,4 @@ var Rant = DS.Model.extend({
   updatedAt: DS.attr('date'),
 });
 
-Rant.reopenClass({
-  FIXTURES: [
-      ]
-});
-
 export default Rant;
