@@ -1,1 +1,17 @@
+<form class="signup-form" {{action 'signup' on='submit'}}>
+  <div class="nav-form">
+    {{input value=firstName type='text' placeholder='First Name'}}
+  </div>
+  <div class="nav-form">
+    {{input value=lastName type='text' placeholder='Last Name'}}
+  </div>
+  <div class="nav-form">
+    {{input value=email type='text' placeholder='Email'}}
+  </div>
+  <div class="nav-form">
+    {{input value=password type='text' placeholder='Password'}}
+  </div>
+  {{input class='btn-green login' value='Sign Up' type='submit'}}
+</form>
+
 {{outlet}}
