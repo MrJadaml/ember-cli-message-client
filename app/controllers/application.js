@@ -35,7 +35,7 @@ export default Ember.Controller.extend({
           localStorage.setItem('authToken', response.auth_token);
           localStorage.setItem('userId', response.user_id);
           this.set('isAuthenticated', true);
-          this.transitionToRoute('rants');
+          location.reload();
         }
       }.bind(this));
     },
@@ -44,7 +44,7 @@ export default Ember.Controller.extend({
       localStorage.clear();
       this.set('isAuthenticated', false);
       // insert logout into header
-      this.transitionToRoute('rants');
+      location.reload();
     }
   }
 });
