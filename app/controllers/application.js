@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
       };
 
       this.set('errorMessage', null);
-      return Ember.$.post('login', credentials).then(function(response){
+      return Ember.$.post('https://whispering-waters-1632.herokuapp.com/login', credentials).then(function(response){
         this.set('errorMessage', response.error);
         if (response.auth_token) {
           localStorage.setItem('authToken', response.auth_token);
