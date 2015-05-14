@@ -80,9 +80,16 @@ button {
   font-size: 14px;
   cursor: pointer;
   color: #fff;
+  &:focus {
+    outline: 0;
+  };
+  &:hover {
+    transition: .25s;
+    background: white;
+  }
 }
 
-.login, .logout {
+.login {
   width: 100%;
   border: 1px solid;
   border-radius: 3px;
@@ -90,18 +97,45 @@ button {
   font-size: 14px;
   cursor: pointer;
   color: #fff;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    transition: .25s;
+    background: white;
+  }
 }
+
+.logout {
+  width: 100%;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 7px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+}
+
 
 .btn-green {
   background: $teal;
+  &:hover {
+    color: $teal;
+  }
 }
 
 .btn-gray {
   background: $cancel;
+  &:hover {
+    color: $cancel;
+  }
 }
 
 .btn-yellow {
   background: $delete;
+  &:hover {
+    color: $delete;
+  }
 }
 
 .new-rant-btn {
