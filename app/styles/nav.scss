@@ -14,6 +14,13 @@
     color: #fff;
     padding: 15px;
     text-decoration: none;
+    &:hover {
+      position: relative;
+      bottom: 2px
+    };
+    &:focus {
+      outline: 0;
+    }
   }
 }
 
