@@ -19,6 +19,12 @@ export default Ember.ObjectController.extend({
     },
 
     saveRant: function (rant) {
+      var rant = this.store.push('rant', {
+         id: rant.id,
+         title: rant.rantTitle,
+         body: rant.rantBody,
+         user: 1,
+       });
       rant.save().then(function () {
         this.set('editTemp', false);
       }.bind(this));
