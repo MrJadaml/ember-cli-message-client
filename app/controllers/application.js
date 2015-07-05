@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import ENV from '../config/environment'
 
 export default Ember.Controller.extend({
   needs: ['search'],
@@ -25,7 +26,8 @@ export default Ember.Controller.extend({
       };
 
       this.set('errorMessage', null);
-      return Ember.$.post('login', credentials).then(function(response){
+      debugger;
+      return Ember.$.post(ENV.adapterURL + 'login', credentials).then(function(response){
         this.set('errorMessage', response.error);
         if (response.auth_token) {
           localStorage.setItem('authToken', response.auth_token);
