@@ -8,26 +8,19 @@ export default Ember.ObjectController.extend({
   }.property('model.@each'),
 
   charCount: function () {
-    return this.get('rantBody').length;
-  }.property('rantBody'),
+    return this.get('body').length;
+  }.property('body'),
 
   actions: {
     editRant: function() {
       this.set('editTemp', true);
-      this.set('rantTitle', this.get('title'));
-      this.set('rantBody', this.get('body'));
     },
 
-    saveRant: function (rant) {
-      var rant = this.store.push('rant', {
-         id: rant.id,
-         title: rant.rantTitle,
-         body: rant.rantBody,
-         user: 1,
-       });
-      rant.save().then(function () {
-        this.set('editTemp', false);
-      }.bind(this));
+    saveRant: function () {
+      var self = this;
+      self.get('model').save().then(function () {
+        self.set('editTemp', false);
+      });
     },
 
     cancelRant: function () {
