@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   needs: ['search'],
-  isAuthenticated: true,
+  isAuthenticated: false,
 
   init: function() {
     var authToken = localStorage.getItem('authToken');

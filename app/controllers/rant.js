@@ -29,7 +29,6 @@ export default Ember.ObjectController.extend({
 
     deleteRant: function (rant) {
       rant.deleteRecord();
-      rant.save();
     }
   },
 });
