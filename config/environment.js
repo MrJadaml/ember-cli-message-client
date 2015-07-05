@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'client-rantly',
     environment: environment,
     baseURL: '/',
-    adapterURL: process.env.ADAPTER_URL,
+    adapterURL: 'https://rantly-server.herokuapp.com/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -33,6 +33,7 @@ module.exports = function(environment) {
 
 
   if (environment === 'development') {
+    ENV.adapterURL = 'http://localhost:3000/';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
